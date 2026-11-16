@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <DefaultItemExcludes>$(DefaultItemExcludes);Backup_Versi_Stabil\**</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\WinRtBridge.cs" />
+    <Resource Include="app.ico" />
+    <None Include="Services\WinRtBridge.cs" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="WinRtBridge.exe" Condition="Exists('WinRtBridge.exe')" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

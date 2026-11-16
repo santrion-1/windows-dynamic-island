@@ -1,0 +1,7 @@
+bin/
+obj/
+Backup_Versi_Stabil/
+*.zip
+*.lnk
+*.bat
+startup_error.log
